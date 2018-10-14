@@ -1,0 +1,5 @@
+-record(state, {users=[], channels=[]}).
+-record(channel, {name, users=[], messages=[]}).
+-record(message, {time, nickname, text}).
+-record(user, {name, channels=[], sessions=[]}).
+-record(chinfo, {channel_id, name, alias="", unread=0}).

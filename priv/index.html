@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!------ bootstrap ---------->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!------ react ---------->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+
+    <!------ babel ---------->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
+    <!------ fontawesome ---------->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/brands.css" integrity="sha384-Px1uYmw7+bCkOsNAiAV5nxGKJ0Ixn5nChyW8lCK1Li1ic9nbO5pC/iXaq27X5ENt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I" crossorigin="anonymous">
+
+
+    <!------ local ---------->
+    <link rel="stylesheet" href="/static/css/index.css">
+    <!------ local ---------->
+    <script type="text/babel" src="/static/js/SideBar.js"></script>
+    <script type="text/babel" src="/static/js/Messages.js"></script>
+    <script src="/static/js/index.js"></script>
+  </head>
+  <body>
+    <div class="container app">
+      <div class="app-one">
+        <div class="col-sm-4 side">
+          <div class="side-one">
+
+            <div class="joinBox">
+              <div class="col-sm-12 joinBox-inner">
+                <div class="form-group has-feedback">
+                  <input
+                     id="joinText"
+                     type="text"
+                     class="form-control"
+                     name="joinText"
+                     placeholder="Channel name"
+                     autocomplete="off">
+                  <span class="glyphicon glyphicon-plus form-control-feedback"></span>
+                </div>
+              </div>
+            </div>
+
+            <div id="sideBar" class="sideBar">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-sm-8 conversation">
+          <div class="heading">
+            <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+              <span><i class="fab fa-weixin fa-2x"></i></span>
+            </div>
+            <div class="col-sm-8 col-xs-7 heading-name">
+              <span id="heading-channel-name" class="heading-name-meta"></span>
+            </div>
+            <div class="col-sm-1 col-xs-1 heading-leave pull-right">
+              <span id="leave" class="glyphicon glyphicon-log-out fa-2x pull-right"></span>
+            </div>
+          </div>
+
+          <div class="message" id="conversation">
+          </div>
+
+          <div class="reply">
+            <div class="reply-main">
+              <textarea class="form-control" id="comment" autocomplete="off" placeholder="Shift+Enter"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="loginPanel" class="login-panel">
+      <div class="login-body">
+        <p>
+          <input type="text" id="username" placeholder="username" autocomplete="off"></input>
+        </p>
+        <p>
+          <button type="button" id="login">Login</button>
+          <button type="button" id="signup">Sign Up</button>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
